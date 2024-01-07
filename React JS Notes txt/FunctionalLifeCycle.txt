@@ -1,0 +1,65 @@
+1. Mounting Phase:
+useState: Initialize state variables using the useState hook.
+useEffect (ComponentDidMount): Execute code after the component is mounted.
+
+import React, { useState, useEffect } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Component is mounted!');
+    // Other code...
+
+    // Cleanup function (ComponentWillUnmount)
+    return () => {
+      console.log('Component will unmount!');
+      // Cleanup code...
+    };
+  }, []); // Empty dependency array means it runs only once on mount
+}
+
+
+2. Updating Phase:
+useEffect (ComponentDidUpdate): Execute code when certain dependencies change.
+
+import React, { useState, useEffect } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Component is updated!');
+    // Other code...
+
+    // Cleanup function (ComponentWillUnmount)
+    return () => {
+      console.log('Component will unmount!');
+      // Cleanup code...
+    };
+  }, [count]); // Run when count changes
+}
+
+3. Unmounting Phase:
+useEffect Cleanup (ComponentWillUnmount): Execute cleanup code when the component is about to unmount.
+
+import React, { useState, useEffect } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Component is mounted!');
+
+    // Cleanup function (ComponentWillUnmount)
+    return () => {
+      console.log('Component will unmount!');
+      // Cleanup code...
+    };
+  }, []); // Empty dependency array means it runs only once on mount
+}
+
+
+Note: The useEffect hook is versatile and can be used to mimic the behavior of componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
+
+Stateless functional component ans Statefull Class Component

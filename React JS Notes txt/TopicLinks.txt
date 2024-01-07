@@ -1,0 +1,36 @@
+
+Rucha Tagline
+Thu, Dec 7, 6:51 PM
+to me
+
+https://www.freecodecamp.org/news/get-started-with-react-for-beginners/
+
+https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/
+
+https://legacy.reactjs.org/docs/jsx-in-depth.html
+
+https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58
+
+https://retool.com/blog/the-react-lifecycle-methods-and-hooks-explained
+
+https://www.javatpoint.com/what-is-dom-in-react
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+https://www.freecodecamp.org/news/react-js-for-beginners-props-state-explained/
+
+https://medium.com/swlh/the-role-of-babel-in-react-dbcf78c69125
+
+https://www.freecodecamp.org/news/how-to-use-es6-javascript-features-in-react/
+
+https://legacy.reactjs.org/docs/hooks-state.html(useState in class and functional)
+
+https://youtu.be/uUbTd-lALjc?si=l5nrwabI3h6pFYiz
+
+	
+
+
+
+React tasks links:
+
+https://www.knowledgehut.com/blog/web-development/react-js-projects-for-beginners

@@ -1,0 +1,490 @@
+React JS:
+
+Note: React’s data flow between components is uni-directional (from parent to child only).
+
+Router 5 - https://www.tecforfun.com/frameworks/how-to-set-up-a-basic-react-router-v5/
+
+
+Introduction of React
+
+React js is a free and open-source front-end JavaScript library for creating UI component-based user interfaces.
+
+React is maintained by Meta.
+
+Current version of react is 18.
+
+It is client side scripting language.
+
+Real Life Examples where react has been used:  Facebook, Instagram, What’s app , Netflix
+
+
+
+React Folder Structure
+
+What is Create-react-app?
+
+create-react-app is the best way to start building a new single-page application in React.
+
+How to create react app?
+
+The first step is to start your terminal/command prompt, navigate to the folder where you want to save your React application, and then execute this command:
+
+Syntax: npx create-react-app my-app
+
+How to Run Your React Application
+
+run “npm start” to see your app live on localhost:3000.
+
+What is node_module folder?
+
+The node_modules folder contains all of our dependencies, and this folder is ignored when we set up source control.
+
+Note: If you delete the node_modules folder, the application will break because you'll no longer have your dependencies.
+
+What is in public_folder file?
+
+The public folder contains some static files, such as the HTML file(index.html). For example, change the title of your web app, add CDNs such as Google Fonts, and so on.
+
+What is .gitignore file?
+
+Just as the name suggests, it’s a file that specifies which files and folders will be ignored by our source control. (Only for git provider)
+
+What is the src folder?
+
+Where development takes place. 
+
+src folder files:  App.js,  index.js, index.css, App.css
+
+NOte: index.html will be in public folder
+
+
+Basics of React
+
+Why do we use react rather than other technology?
+
+Easier to maintain and is flexible due to its modular structure.
+
+To allow developers to create fast user interfaces for websites and applications alike easily.
+
+Because of its component-based approach and virtual DOM, React is a lot faster than other frameworks
+
+
+Single-page Application 
+
+A single-page application is an app that works inside a browser and does not require page reloading during use.
+
+Ex: Gmail, Google Maps, Facebook or GitHub
+
+Single-page sites help keep the user in one, comfortable web space where content is presented to the user in a simple, easy and workable fashion.
+
+Multi-page Application
+
+Multiple-page applications work in a “traditional” way. Every change eg. display the data or submit data back to server requests rendering a new page from the server in the browser. 
+
+These applications are large, bigger than SPAs because they need to be. Due to the amount of content, these applications have many levels of UI.
+
+What is component in react?
+
+Components are like functions that return HTML elements.
+
+Components are independent and reusable bits of code.
+
+Components come in two types: Class components and Function components
+
+It is now suggested to use Function components along with Hooks.
+
+Components are re-rendered whenever there are any changes made to the props or state.
+
+Class component
+
+When creating a React component, the component's name MUST start with an upper case letter.
+
+A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+
+The lifecycles of React components are divided into the following three sections:
+
+Mounting: In this step, your initial states and data are initialized.
+
+Updating: In the update section, you can access your states and data, and you can perform update operations on it.
+
+Unmounting: And in the last section, you can write the operations you want to do before unmounting a component, such as clearing a SetInterval
+
+Lifecycles also include three phases in execution:
+
+Render phase: Pure and has no side effects. Maybe paused, aborted, or restarted by React.
+
+Pre-commit phase: Can read the DOM.
+
+Commit phase: Can work with DOM, run side effects, schedule updates.
+
+Virtual DOM
+
+A react virtual DOM is formed whenever something new is introduced to the application, and it is visualized as a tree. A node in this tree represents each component of the application. Therefore, a new Virtual DOM tree is constructed whenever the state of any element changes.
+
+Document - HTML document
+
+Object - elements like h1, head, body
+
+Model - complete document
+
+How does virtual DOM actually make things faster?
+
+When anything new is added to the application, a virtual DOM is created and it is represented as a tree. Each element in the application is a node in this tree. So, whenever there is a change in the state of any element, a new Virtual DOM tree is created. This new Virtual DOM tree is then compared with the previous Virtual DOM tree and make a note of the changes. After this, it finds the best possible ways to make these changes to the real DOM. Now only the updated elements will get rendered on the page again.
+
+Topic covered in JSX
+
+React JSX
+
+Benefits of JSX
+
+Expressions
+
+Attributes
+
+Specifying attribute values
+
+Children Elements in JSX
+
+Comments 
+
+Why do we use babel in react?
+
+We use Babel with React to transpile the JSX code into simple React functions that can be understood by browsers. Using this way we can assure that our JSX code can work in almost any browser. 
+
+Important functions provided by ReactDOM
+
+render(): This is one of the most important methods of ReactDOM. This function is used to render a single React Component or several Components wrapped together in a Component or a div element. 
+
+findDOMNode(): This function is generally used to get the DOM node where a particular React component was rendered. This method is very less used like the following can be done by adding a ref attribute to each component itself.
+
+unmountComponentAtNode(): This function is used to unmount or remove the React Component that was rendered to a particular container.
+
+hydrate(): This method is equivalent to the render() method but is implemented while using server-side rendering. 
+
+createPortal(): It allow us to render a component into a DOM node that resides outside the current DOM hierarchy of the parent component. 
+
+What are props in react?(https://www.linkedin.com/pulse/understanding-difference-between-props-state-react-basit-ch#:~:text=Props%20are%20used%20to%20pass,updated%20using%20the%20setState%20function.)
+
+Props, short for "properties," are a way to pass data from a parent component to a child component in React. Whenever we call child components from parents we can pass data as props. This helps the parent component communicate with the child.
+
+ES6 concepts used in react (https://www.freecodecamp.org/news/how-to-use-es6-javascript-features-in-react/)
+
+Modules (Import/Export)
+
+Destructuring of Array
+
+Spread Operator
+
+Arrow functions
+
+Template Literals
+
+Ternary operator
+
+List in react
+
+Lists are very useful when it comes to developing the UI of any website. Lists are mainly used for displaying menus on a website, for example, the navbar menu. In regular JavaScript, we can use arrays for creating lists. 
+
+Keys in react
+
+A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted.
+
+Keys are used to give an identity to the elements in the lists. It is recommended to use a string as a key that uniquely identifies the items in the list.  
+
+Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+
+Key attribute is used to track the changes in the list.
+
+Always prefer giving unique id to the key.
+
+If there is not any insert, update and delete in list then we can give index as a key 
+
+React Hooks
+
+Hooks don’t work inside classes — they let you use React without classes
+
+With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community?
+
+useState(): returns a pair: the current state value and a function that lets you update it. You can call this function from an event handler or somewhere else. The only argument to useState is the initial state.
+
+Pros:
+
+It takes a single argument, which is the initial state and returns an array with two elements: the current state and a function to update the state.
+
+useState requires less boilerplate code compared to useReducer. There’s no need to define a separate action object or switch statement.
+
+Cons: https://www.linkedin.com/pulse/dont-use-usestate-hook-aritra-mondal#:~:text=More%20the%20number%20of%20usestate,from%20one%20page%20to%20another.
+
+useState can become unwieldy if you need to manage complex state, especially if the state is deeply nested. In such cases, it can be difficult to update the state correctly.
+
+Ex: Add to cart, Delete cart items
+
+When to not use state when we don’t need to change any UI or values
+
+useEffect(): The useEffect hook in React is use to handle the side effects in React such as fetching data, updating DOM, setting up subscriptions or timers etc can lead to unwarranted side effects 
+
+Use: fetching data, directly updating the DOM, and timers.
+
+(https://www.w3schools.com/react/react_useeffect.asp)
+
+(https://dmitripavlutin.com/react-useeffect-explanation/)
+
+Add dependency if you have to see change effect every time otherwise add empty square brackets.
+
+There are 3 different types of useEffect(): 
+
+No dependency passed: (useEffect will render infinite times)
+An empty array: (only render once)
+  3. Props or state values: (Hook that is dependent on a variable. If the  variable updates, the effect will run again)
+
+useEffect Cleanup: Some effects require cleanup to reduce memory leaks. Also to stop infinite times rendering
+
+
+
+
+
+
+
+useCallBack(): memorise the function to prevent recreation upon every render. allowing you to avoid unnecessary re-rendering which makes your application more efficient.
+
+
+
+
+
+Global State
+
+Global state makes managing shared data easier. Storing all of an application's state in a global object makes it easier to manage from a single location rather than having to pass data down through the component hierarchy. It can make code easier to understand and maintain.
+
+It also enables communication between components that are not directly connected.
+
+
+
+React Memo
+
+React.memo only checks for prop changes. If a function component wrapped in React.memo has a useState, useReducer or useContext Hook in its implementation, it will still re-render when state or context change.
+
+To improve user interface performance, React offers a higher-order component React.memo(). When React.memo() wraps a component, React memoizes the rendered output of the wrapped component and then skips unnecessary renderings.
+
+
+
+
+
+
+
+Pure Component(https://blog.logrocket.com/what-are-react-pure-functional-components/#:~:text=in%20your%20browser.-,What%20is%20a%20pure%20component%20in%20React%3F,for%20the%20same%20input%20values)
+
+All class components are sub classes of either Component or PureComponent
+
+When a class component is a sub class of Component, it is re-rendered whenever:
+
+state changes
+context changes
+parent re-renders
+props change
+A component is re-rendered whenever its parent re-renders though its context, state or props haven't changed.
+
+To prevent a component from re-rendering because of its parent's re-render, you can declare it as a sub class of PureComponent
+
+If the state and props haven't changed, react doesn't re-render the component even if the parent re-renders??
+
+
+
+
+
+Context Provider
+
+If there are few components that need to use the same state and they all have a common parent which can store it. But once you have too many components that need the same state and/or they are too far apart in the React component tree, passing the state down through props becomes a nightmare.
+
+Context is created using a createContext function. The function takes the initial value of the Context as a parameter and returns the Context created.
+
+Syntax: const ExampleContext = React.createContext({});
+
+each Context uses a Provider component that receives a value. This value is set as the value of the Context and can be accessed by all the children components.
+
+
+
+Conditional Redering:
+
+If and else statement
+Logical && Operator
+Ternary operator
+Switch
+
+
+Questions:
+
+
+
+Q. What is re-rendering?
+
+Data goes from parent components to child components in React via props. When the data changes, React immediately renders the affected components again. Rendering is the process of updating the virtual DOM with new data and calculating the fewest modifications required to update the actual DOM.
+
+
+
+Q. When to use react memo?
+
+Ans: Pure functional component: Your component is functional and given the same props, always renders the same output
+
+Renders often: Your component renders often
+
+Re-renders with same props: Your component is usually provided with the same props during re-rendering
+
+
+
+Q. Why we use Pure component?
+
+Ans: components are re-rendered whenever there are any changes made to the props or state, but many times it happens that the changes made to the state or props do not change them but still a re-render takes place. This is an unnecessary re-render and can be saved to increase the performance of react apps.
+
+For these performance benefits, we utilize pure components in React.
+
+
+
+Q. Pros of  Pure component
+
+Ans: They prevent the re-rendering if props and state are the same.
+
+	Increases performance.
+
+	Shallow comparison of state and props
+
+
+
+Q. Why do we import useState?
+Ans: It lets us keep local state in a function component.
+
+
+
+Q. Class component life-cycle 
+
+
+
+Callback and memo examples and use?
+
+
+
+Q. What happens if we don’t use key to our list?
+
+Ans:  It will give warning in console that, Each child in a list should have a unique “key” prop
+
+
+
+Q. React Memo?
+
+Ans: Add memo to child component it will stop re-rendering of the child component
+
+
+
+
+
+Q. Global State?
+
+Ans: We use redux library
+
+
+
+Q. Virtual Dom is react Dom?
+
+
+
+Q. What is the use of hooks?
+
+
+
+Q. Why do we use hooks?
+
+
+
+Pros and cons of hooks?(useState)
+
+
+
+Q. When useEffect() hook goes in the infinite loop?
+
+
+
+Ans: Not specifying dependencies: The most common cause of infinite loops is not specifying dependencies correctly. If you do not pass any dependencies, the hook will be called after every render, leading to an infinite loop. To avoid this, you should always specify the dependencies that the hook depends on.
+
+
+
+Modifying the state inside the hook: Another common mistake is modifying the state inside the useEffect hook. When you modify the state inside the hook, it triggers a re-render, which causes the hook to be called again. This creates an infinite loop.
+
+
+
+Q. Any alternatives of hooks?
+
+
+
+Q. What is e.target.value?
+
+Ans: Stores input field value
+
+
+
+Q. What is stateless and stateful component?
+
+Ans: Stateful component which has state and props
+
+	Statelesss component has only props
+
+
+
+Types of useEffect
+
+First time all the useEffect will render one time
+
+Empty Array - will run once 
+
+Array means dependency is given - initially will call once
+
+Only function - if state and props will change then useEffect will call 
+
+
+
+Q. Functional component is Pure component or not?
+
+Ans: React.Memo() is considered as pure component
+
+
+
+Q. Difference between Component and Function 
+
+Ans: First letter will be capital in component name’s and whereas function’s first letter will be small
+
+
+
+Q. Difference of Dependencies and dev-dependencies 
+
+ Dependency:
+
+ It contains the library, which your project requires for production environments and functioning effectively. 
+
+You require these packages to test and run your project on the localhost. 
+
+Dev-dependencies:
+
+devDependencies are those packages that you need only for project development purposes. Example- Babel, Webpack, etc. 
+
+These types of dependencies are required during the web application development process but not while testing or executing it.  
+
+
+
+Q. What is readme file in react file?
+
+Ans: The Readme file is often the first file that the users read.
+
+We can describe a README file as a guide that gives users a detailed description of a project you have worked on. It can also be described as documentation with guidelines on how to use a project. Usually it will have instructions on how to install and run the project
+
+
+
+Q. What is package.json in react file?
+
+Ans:  The main purpose of this file is to hold various metadata related to the project. The file is used to provide the information to the node package manager (NPM) that allows identifying the project and its dependencies.
+
+It contains all the dependencies and dev-dependencies
+
+
+
+Q. What is package-lock.json file?
+
+Ans: It contains detail of node module files
+

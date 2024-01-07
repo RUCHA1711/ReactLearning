@@ -1,0 +1,11 @@
+const intialState = 0;
+
+const reducer = (state, action) => {
+    return state;
+}
+const  [state, dispatch] = useReducer(reducer, intialState);
+
+- Reducers are pure functions that take in a state and action and return a new state.
+- state is current state
+- action is a method where to perform any operation
+- reducer fucntion will always return something.

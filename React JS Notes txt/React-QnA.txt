@@ -1,0 +1,146 @@
+Q. What is DOM?
+
+Ans: ReactDOM is a specific package that provides the necessary methods to render React components into the DOM.
+
+Q.  What is the storage MB of local storage?
+
+Ans: local Storage stores up to 10 megabytes
+
+Q. What is the storage MB of session storage?
+
+Ans: session storage stores up to 5 megabytes
+
+Q. Difference between localStorage and cookies
+
+Ans:  Both localStorage and cookies are used to store client-side data.
+
+Cookies are automatically sent to the server with every HTTP request, but localStorage stays local within the user’s device. This can improve web performance and doesn’t increase network traffic because it doesn’t share data with the server.
+
+The data you store with localStorage doesn’t expire, it stays indefinitely until you delete it manually. On the other hand, cookies can be set to expire after some time or as soon as you close the browser. Cookies usually store data like user preferences and login/authentication information.
+
+Cookies are a good option for small amounts of data that need to be sent to the server with each request, while local storage is better suited for larger amounts of data that need to persist between visits to the website.
+
+Q. Difference between client side and server side. (https://www.educative.io/answers/client-side-vs-server-side)
+
+Ans: Client-side means that the processing takes place on the user’s computer. It requires browsers to run the 	scripts on the client machine without involving any processing on the server.
+
+Server-side means that the processing takes place on a web server.This processing is important to execute the tasks required by the user on the web.
+
+Q. What is React JSX?
+
+Ans: JSX stands for JavaScript XML. JSX is basically a syntax extension of JavaScript. It helps us to write HTML in JavaScript.
+
+JSX creates an element in React that gets rendered in the UI. It is transformed into JavaScript functions by the compiler at runtime. Error handling and warnings become easier to handle when using JSX.
+
+Q. Benefits/Why JSX is used?
+
+Ans:  It is faster than normal JavaScript as it performs optimizations while translating to regular JavaScript.
+
+	  Instead of separating the markup and logic in separate files, React uses components for this purpose.
+
+	  As JSX is an expression, we can use it inside of if statements and for loops, assign it to variables, accept it as arguments, or return it from functions.
+
+Q. What is transpiler?(Babel is transpiler in react)
+
+Ans: A transpiler is another software, sometimes called a source-to-source compiler, which converts a high-level language to another high-level language.
+
+Q.  Why we use keys in react?
+
+Ans: A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. Keys are used to give an identity to the elements in the lists.
+
+Q. Why we should not use key as a index value?
+
+Ans: Performance Issues due to unnecessary re-renders.
+
+	Issues in data mapping in case list items are sorted, filtered, or deleted.
+
+Q. Benefits of using unique id as a key
+
+Ans: After adding a new element it would not re-render the previous list items.
+
+Q. Advantages of react Fragment
+
+Ans:  The code readability of React Fragment is higher.
+
+	  Because React fragments have a smaller DOM, they render faster and use less memory.
+
+	  React Fragment allows React components to be rendered without causing any parent-child relationship issues.
+
+	  Fragments allow the return of multiple JSX elements.
+
+Q. Difference between useRef and createRef 
+
+Ans: createRef is generally used when creating a ref in a class component, whereas useRef is used in function components.
+
+createRef returns a new ref object each time it is called, while useRef returns the same ref object on every render.
+
+createRef does not accept an initial value, so the current property of the ref will be initially set to null. In contrast, useRef can accept an initial value, and the current property of the ref will be set to that value.
+
+Q. What happens if we don’t use key to our list?
+
+Ans: If you don't provide a key, React will warn you in the console and fall back to using the array index as a key. However, as mentioned earlier, this can lead to issues when the list is updated. It is highly recommended to always provide a unique key when rendering a list of elements.
+
+Q. What is state in react?
+
+
+q. Difference between state and props
+
+Ans: https://www.knowledgehut.com/blog/web-development/react-state-vs-props
+
+
+
+https://tsh.io/blog/react-component-lifecycle-methods-vs-hooks/#:~:text=The%20component's%20lifecycle%20consists%20of,a%20component%20from%20the%20DOM.
+
+https://medium.com/swlh/all-lifecycles-in-class-components-stateful-and-similar-in-functional-components-stateless-c88564e42f24
+
+https://www.freecodecamp.org/news/what-is-state-in-react-explained-with-examples/#:~:text=Let's%20take%20an%20example%20of,()%20%3D%3E%20%7B%20this.
+
+https://stackoverflow.com/questions/64847390/input-text-field-for-a-particular-item-in-array-while-mapping
+
+https://refine.dev/blog/how-react-fragments-is-works/#problem-with-using-div
+
+React Examples: https://javascript.plainenglish.io/47-react-examples-for-website-development-1334cf89281d
+ 
+
+Questions:
+
+Why do we import useState?
+- It lets us keep local state in a function component.
+
+Callback and memo examples and use?
+
+React Memo?
+- Add memo to child component it will stop re-rendering of the child component
+
+Global State?
+- We use redux library
+
+Virtual Dom is react Dom?
+No
+
+What is the use of hooks?
+
+Any alternatives of hooks?
+
+Why do we use hooks?
+
+Pros and cons of hooks?(useState)
+
+Q. When useEffect() hook goes in the infinite loop?
+
+Not specifying dependencies: The most common cause of infinite loops is not specifying dependencies correctly. If you do not pass any dependencies, the hook will be called after every render, leading to an infinite loop. To avoid this, you should always specify the dependencies that the hook depends on.
+
+Modifying the state inside the hook: Another common mistake is modifying the state inside the useEffect hook. When you modify the state inside the hook, it triggers a re-render, which causes the hook to be called again. This creates an infinite loop.
+
+What is e.target.value?
+- Stores input field value
+
+What is stateless and stateful component?
+- Stateful component which has state and props
+- Statelesss component has only props
+
+Types of useEffect
+- First time, the useEffect will run one time
+Empty Array - will run once 
+Array means dependency is given - intially will call once and run whenever the state updates
+Only function - if state and props will change then useEffect will call 

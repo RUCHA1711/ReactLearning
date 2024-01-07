@@ -1,0 +1,6 @@
+Differences:
+
+1.class -> className
+2.for -> htmlFor
+3.camelCase property naming convention
+onClick -> onClick

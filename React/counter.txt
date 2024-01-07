@@ -1,0 +1,5 @@
+Counter App
+Create two buttons: Add and Remove
+On click Add button the value should increased by one
+On click Remove button the value should decreased by one
+Show the increased or decreased value on the UI

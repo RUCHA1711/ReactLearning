@@ -1,0 +1,19 @@
+1. Input box: User pase thi color enter karavo
+    -> Ek button
+    -> Button na submit par ek div create thavo joiye ane enu background je bi user e input ma lakhyu hoy to set thase.
+
+    ------------
+    1. red
+
+    -----
+    |red|
+    -----
+
+    2. green
+    -----
+    |red|
+    -----
+
+    -------
+    |green|
+    -------

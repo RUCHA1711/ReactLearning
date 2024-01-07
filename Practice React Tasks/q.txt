@@ -1,0 +1,73 @@
+1. What is React?
+
+2. React and ReactDOM?
+-> Both JS libraries
+
+-> HTML DOM ()
+
+React -> JSX (hooks, Component)
+-> ReactDOM
+    -> JSX to HTML convert 
+    -> Virtual DOM
+        -> HTML DOM
+    
+    -> document.get
+
+
+3. package.json - dependencies and supported browsers version 
+    -> react, reactdom
+    -> reactscripts (start, build, test)
+    -> Locally -> npm run start
+            -> npm run build (Converts entire React code to JS bundle with all the statis files (css, images))
+
+4. React.StrictMode
+    -> Developer ne guideline follow karavama ma help kare
+    -> Bhul thi kaik guidenline viruddh code lakhay to strictmodel ene as a warning/error message throw karse terminal par
+    -> Strict model je components par apply karyu hase ena par j lagse
+        <Component1>
+            <React.StrictMode>
+                <Component2>
+                <Component3>
+            </React.StrictMode>
+        <Component4>
+    
+    -> Jo Comonent1 or Component4 ma kaik bhul valo code lakhay to strict mode ene detect nai kare, kem ke e khali Component2 and Component3 par j lagse.
+
+
+5. index.html
+
+    -> <div id="root>
+            <h1>Jay Shree Ram</h1>
+            <h1>Jay Shree Ram</h1>
+            <h1>Jay Shree Ram</h1>
+        </div>
+
+        div (root) DOM
+
+    
+    -> src -> ReactDOM.createRoot(doc.gEBI("root"))
+        -> ReactDOM index.html na e element ne find karse jeni id root che ane enu html ma je bi tree structure hoy e same to same react mate virtual DOM tree banavi kadhse.
+        div (root)
+         
+
+6. Component
+    -> React ni bhasa ma function ne component kevay
+    -> Component -> JSX return
+    <App>
+
+    -> Reason:
+        -> Code readable
+        -> Code resuable
+            -> statically ()
+            -> dynamically 
+                -> Props
+    
+    -> Conditional rendering
+
+
+7. Event handling + useState
+-> useState: 
+    -> variable and a function
+    -> function is used to update the variable state
+    
+

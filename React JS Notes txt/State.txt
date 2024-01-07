@@ -1,0 +1,74 @@
+useState():
+
+1. Always use function approach to update state, instead of directly updating state function.
+2. Do proper Initialization.
+3. Don't create too many states if you have many inputs in a form only create one state.
+4. If you have more complex object that has different properties like arrays, nested objects, and other things it's better to use a reducer because when you update different properties, it's gonna be really messy here.
+
+useEffect():
+Primitive and Non-primitive Dependencies:
+String,Numbers and boolean they are primitive
+When we compare 2 objects or 2 arrays with same data then we will get false because they refer to different points in the memory, so they are 2 different objects with the same content.
+1. React
+
+First Render(number = 0)
+
+Component:
+Hey React, you should render this: 
+<span>You should clicked 0 times </span>
+
+And after rendering you should run this effect:
+() => {document.title = `You clicked 0 times`;}
+
+
+2. Browser
+Done! It's on the screen
+
+Adding dependency means: run the function at the beginning and after, run it again when only this value changes.
+
+Clean-up function:
+It will run clean up function first and only after that it runs the effect again.
+It prevents any memory leaking and makes your application much faster.
+It works as component UnMount
+
+
+React.StrictMode?? due to this our hooks rendered 2 times?
+This mode is useful to find out the bugs, especially in useEffect.
+
+useReducer():
+When to use reducer hook?
+- When 2 or more states change together it's better to use useReducer hook.
+
+
+Right after clicking
+Component
+Hey Reducer, I'm starting fetching post
+
+Reducer
+State = {
+    loading: false,
+    post: {},
+    error: false
+}
+
+If it's successfull
+Component
+Hey Reducer, it's successfull. Here is the API response.
+
+Reducer
+State = {
+    loading: false,
+    post: {id:1, title:"lorem", desc:"hello world"},
+    error: false
+}
+
+If it's failure
+Component
+Hey Reducer, There is an error.
+
+Reducer
+State = {
+    loading: false,
+    post: {},
+    error: false
+}

@@ -1,0 +1,129 @@
+1. Passing String Prop
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  return <ChildComponent name="John" />;
+};
+
+// ChildComponent.js
+import React from 'react';
+
+const ChildComponent = (props) => {
+  return <p>Hello, {props.name}!</p>;
+};
+
+export default ChildComponent;
+
+2. Passing Number Prop
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  return <ChildComponent age={25} />;
+};
+
+// ChildComponent.js
+import React from 'react';
+
+const ChildComponent = (props) => {
+  return <p>Age: {props.age}</p>;
+};
+
+export default ChildComponent;
+
+3. Passing Boolean Prop
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  return <ChildComponent isActive={true} />;
+};
+
+// ChildComponent.js
+import React from 'react';
+
+const ChildComponent = (props) => {
+  return <p>Is Active? {props.isActive ? 'Yes' : 'No'}</p>;
+};
+
+export default ChildComponent;
+
+4. Passing Function Prop
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
+
+  return <ChildComponent onClick={handleClick} />;
+};
+
+// ChildComponent.js
+import React from 'react';
+
+const ChildComponent = (props) => {
+  return <button onClick={props.onClick}>Click me</button>;
+};
+
+export default ChildComponent;
+
+5. Passing Array Prop
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  const colors = ['red', 'green', 'blue'];
+
+  return <ChildComponent colors={colors} />;
+};
+
+// ChildComponent.js
+import React from 'react';
+
+const ChildComponent = (props) => {
+  return (
+    <ul>
+      {props.colors.map((color, index) => (
+        <li key={index}>{color}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default ChildComponent;
+
+6. Passing Object Prop
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  const person = {
+    name: 'Alice',
+    age: 30,
+  };
+
+  return <ChildComponent person={person} />;
+};
+
+// ChildComponent.js
+import React from 'react';
+
+const ChildComponent = (props) => {
+  return (
+    <div>
+      <p>Name: {props.person.name}</p>
+      <p>Age: {props.person.age}</p>
+    </div>
+  );
+};
+
+export default ChildComponent;

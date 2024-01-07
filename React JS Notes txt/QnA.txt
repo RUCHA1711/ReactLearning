@@ -1,0 +1,211 @@
+1. What is vite?
+Ans: It is an bundler through which we can create react projects.
+
+2. Frameworks of React?
+Ans: Nextjs, Gatsby, Remix
+
+3. Command to run or create build
+Ans: npm run build (It will create new folder)
+
+4. command to create vite project
+Ans: npm create vite@latest
+After then give project name
+Select React Framework
+Select Javascript Variant
+
+5. What is reconciliation?
+Ans: The algorithm React uses to diff one tree with another to determine which part needs to be changed.
+One is browser tree and another is React tree.
+
+Reconciliation is the algorithm behind what is popularly understood as the "Virtual Dom".
+
+6. Difference between reconciliation and diffing
+Diffing: 
+Diffing is a specific step within the larger reconciliation process.
+The goal of diffing is to identify the differences, or "diffs", between the two virtual DOMs.
+
+Reconciliation:
+Reconciliation is the broader process that includes diffing and additional steps.
+Reconciliation refers to the entire process of updating the UI to reflect the most recent state of the application.
+
+7. Difference between React and ReactDom
+React is a core library for building UI.
+ReactDOM is a specific package that provides the necessary methods to render React components into the DOM (Document Object Model).
+
+8. JSX in react
+1. Syntax:
+// JSX example
+const element = <h1> Hello, React! </h1>;
+
+2. Embedding Expressions:
+const name = "John";
+const element = <p>Hello, {name}!</p>;
+
+3. Components in JSX:
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="John" />;
+
+4. Attributes:
+const element = <a href="https://www.example.com">Visit Example</a>;
+
+5. Rendering JSX:
+const element = <h1>Hello, React!</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+
+9. How can you access props in a functional component?
+- You can access props as a parameter to the function. The props object is automatically passed as the first argument to the functional component.
+Ex: import React from 'react';
+
+const FunctionalComponent = (props) => {
+  return (
+    <div>
+      <p>{props.data}</p>
+    </div>
+  );
+};
+
+export default FunctionalComponent;
+
+- You can also use destructuring to directly extract specific props from the props object. 
+Ex: import React from 'react';
+
+const FunctionalComponent = ({ data }) => {
+  return (
+    <div>
+      <p>{data}</p>
+    </div>
+  );
+};
+
+export default FunctionalComponent;
+
+
+10. Explain the concept of default props in React.
+- These default values are applied when a parent component does not explicitly pass a value for a particular prop. Default props provide a way to ensure that a component works correctly even if some props are not provided by the parent.
+
+Ex-1: import React from 'react';
+
+const MyComponent = (props) => {
+  // If 'name' prop is not provided, use the default value 'Guest'
+  const { name } = props;
+
+  return (
+    <div>
+      <p>Hello, {name}!</p>
+    </div>
+  );
+};
+
+// Setting default prop values
+MyComponent.defaultProps = {
+  name: 'Guest',
+};
+
+export default MyComponent;
+
+Ex-2: import React from 'react';
+
+const MyComponent = ({ someProp = 'Default Value' }) => {
+  return (
+    <div>
+      <p>{someProp}</p>
+    </div>
+  );
+};
+
+export default MyComponent;
+
+
+11. What is prop drilling, and how can you avoid it? 
+
+12. Can you modify the value of a prop inside a child component? Why or why not?
+- useState and invoke Callbacks
+
+13. Explain the significance of propTypes in React. ??? 
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const MyComponent = (props) => {
+  return (
+    <div>
+      <p>{props.someProp}</p>
+    </div>
+  );
+};
+
+MyComponent.propTypes = {
+  someProp: PropTypes.string.isRequired,
+};
+
+export default MyComponent;
+
+
+14. Avoid Magic Number
+Code readability, maintainability, and reduces the chances of introducing errors.
+Instead of using raw numbers, assign them to variables or constants with descriptive names.
+
+15. What is a React Fragment?
+A React Fragment is a lightweight syntax for grouping multiple elements without adding an extra node to the DOM. It helps avoid unnecessary parent elements.
+
+16. How can you update state based on the previous state in a functional component?
+In functional components, when updating state based on the previous state, you should use the functional form of setState or setCount. The updater function receives the previous state as an argument and returns the new state based on it.
+
+Ex: setCount((prevCount) => prevCount + 1);
+
+
+17. Controlled and Uncontrolled form inputs
+
+When your component is controlling input fields then it is called controlled form inputs
+Ex: <input value={someValue} onChange={handleChange}
+
+Uncontrolled inputs are like traditional HTML form inputs.
+Ex: <input type="text">
+Note: We mostly use "useRef" hook in Uncontrolled component
+
+
+myRef.current = newValue;
+
+18. Difference between child and children in React
+
+Child: child is a variable name or a term that can be used in the context of mapping over an array of child components or elements. For example, when you use the map function to render a list of child components, you might use the term child to represent each individual item in the array.
+Ex: const ParentComponent = ({ children }) => {
+  return (
+    <div>
+      {children.map((child, index) => (
+        <div key={index}>{child}</div>
+      ))}
+    </div>
+  );
+};
+
+C:\Users\Rucha\Desktop\All Notes\Javascript
+
+Children: children is a reserved prop in React that represents the child elements passed to a component. It is a special prop provided by React to access the content between the opening and closing tags of a component.
+// test/src/components/ChildChildren.jsx
+
+Ex: const ParentComponent = ({ children }) => {
+  return (
+    <div>
+      {children}
+    </div>
+  );
+};
+
+// Usage of ParentComponent with children
+<ParentComponent>
+  <ChildComponent1 />
+  <ChildComponent2 />
+</ParentComponent>
+
+
+19. What is the role of the setState function in managing state?
+In class components, the setState function is used to update the state of a component. It takes an object as an argument, merges it with the current state, and triggers a re-render. In functional components, the setCount function returned by useState serves a similar purpose.
+
+Interview Question: https://www.geeksforgeeks.org/reactjs-interview-questions-and-answers/
+
+QnA: 
+How do you lift state up in React? Provide an example.
+When would you use the useReducer hook instead of useState for managing state?
